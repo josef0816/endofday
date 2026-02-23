@@ -83,6 +83,15 @@ export default function ScenarioOne() {
                 />
 
                 <CinematicPanel
+                    title="Release From the Legacy Hull"
+                    subtitle="Panel 06"
+                    imageSrc="/scenario2/scenario_2_panel_6.png"
+                    imageAlt="Pod drops from beneath the heavy ship"
+                    variant="split-right"
+                    text={<p>From beneath the heavy ship, a single pod drops into open air. Metal plates split and vent heat. This is linear deployment: one unit, one path, one outcome.</p>}
+                />
+
+                <CinematicPanel
                     title="Linear Descent"
                     subtitle="Panel 07"
                     imageSrc="/scenario2/scenario_2_panel_7.png"
@@ -163,6 +172,15 @@ export default function ScenarioOne() {
                     text={<p>The Legacy Commander watches red percentages give way to blue. His certainty fractures. This isn't a firefight. It's a structural defeat.</p>}
                 />
 
+                <CinematicPanel
+                    title="Still $100,000"
+                    subtitle="Panel 16"
+                    imageSrc="/scenario2/scenario_2_panel_16.png"
+                    imageAlt="Agentic ship remains untouched with $100,000 intact"
+                    variant="split-right"
+                    text={<p>Through the cockpit glass, the Agentic ship remains untouched. Above it: $100,000 — intact. Scale without depletion.</p>}
+                />
+
                 {/* Grand Finale Panel */}
                 <section className="relative w-full h-screen flex items-end">
                     <div className="absolute inset-x-0 bottom-0 h-[60%] bg-gradient-to-t from-background via-background/90 to-transparent z-10 pointer-events-none" />
@@ -178,7 +196,7 @@ export default function ScenarioOne() {
                     <div className="relative z-20 w-full px-6 md:px-12 pb-24 md:pb-32 flex flex-col items-center text-center">
                         <FadeIn className="max-w-4xl space-y-8">
                             <span className="block font-sans text-xs md:text-sm font-semibold tracking-[0.2em] text-blue-400 mb-4 uppercase">
-                                The Ender
+                                Panel 17 — The Ender
                             </span>
                             <h2 className="font-oswald text-5xl md:text-8xl tracking-tight text-white uppercase leading-[0.9]">
                                 Don't hire soldiers.<br />Deploy a swarm.
