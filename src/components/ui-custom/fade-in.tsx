@@ -7,17 +7,27 @@ import { cn } from "@/lib/utils";
 interface FadeInProps {
     children: ReactNode;
     delay?: number;
+    duration?: number;
+    transition?: any;
     className?: string;
+    noY?: boolean;
 }
 
-export function FadeIn({ children, delay = 0, className }: FadeInProps) {
+export function FadeIn({
+    children,
+    delay = 0,
+    duration = 0.6,
+    transition,
+    className,
+    noY = false
+}: FadeInProps) {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 12 }}
+            initial={{ opacity: 0, y: noY ? 0 : 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{
-                duration: 0.6,
+            transition={transition || {
+                duration: duration,
                 ease: [0.21, 0.47, 0.32, 0.98],
                 delay: delay,
             }}

@@ -106,5 +106,9 @@ They talk. They laugh quietly. The city continues behind them, but it no longer 
 
 **“We don’t steal your job. We steal your overtime.”**
 
+## About the Stories
 
+Scenario 1 stages the AI dilemma as a spectacle in the sky — two commanders given the same $100,000, but operating from radically different beliefs about power. One spends everything on a single deployable unit, clinging to the comfort of visible effort and force. The other activates a system that multiplies instantly, scaling without strain or depletion. It’s more than a tactical contrast; it’s a psychological one. The red commander represents the familiar human instinct to work harder, spend more, and push through. The blue commander represents something more unsettling — intelligence that scales quietly, efficiently, and exponentially. The tension between them embodies the core anxiety around AI: not just competition, but displacement by something that moves faster and smarter.
+
+Scenario 2 brings that abstract fear down to eye level. The battlefield becomes a quiet office. The commander becomes Dave. The red-versus-blue confrontation becomes a man staring at the blue glow of his monitor, wondering if the machine across the room is replacing him. The swarm was never just a strategy — it was the projection of his fear. And when he finally confronts it, he discovers the same truth revealed in the sky: the system wasn’t built to take his place. It was built to remove the friction that kept him trapped in endless overtime. Together, the two stories connect the macro fear of AI replacing armies with the micro fear of AI replacing a single worker — and ultimately reframe that fear as leverage rather than loss.
 
