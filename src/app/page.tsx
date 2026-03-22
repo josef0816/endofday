@@ -1,114 +1,162 @@
-import Link from "next/link";
-import { FadeIn } from "@/components/ui-custom/fade-in";
-import Image from "next/image";
+import { PortfolioHero } from "@/components/PortfolioHero";
+import { WorkGrid } from "@/components/WorkGrid";
+import { AppFeatured } from "@/components/AppFeatured";
 
 export default function Home() {
+  const workItems = [
+    {
+      id: "biskie",
+      title: "Biskie Brand Concept",
+      category: "Branding",
+      imageUrl: "/brain_rot_designs/biskie_hero_section.png",
+      galleryImages: [
+        "/brain_rot_designs/biskie_hero_section.png",
+        "/brain_rot_designs/biskie_landing_page.png"
+      ]
+    },
+    {
+      id: "pac-delivery",
+      title: "PAC Delivery App Concept",
+      category: "Product Design",
+      imageUrl: "/brain_rot_designs/pac_inspired_delivery_app_design.png",
+      galleryImages: [
+        "/brain_rot_designs/pac_inspired_delivery_app_design.png",
+        "/brain_rot_designs/pac_inspired_delivery_app_design_1.png",
+        "/brain_rot_designs/pac_inspired_delivery_app_design_2.png"
+      ]
+    },
+    {
+      id: "sm-cinema",
+      title: "SM Cinema Redesign Concept",
+      category: "Interface Design",
+      imageUrl: "/brain_rot_designs/sm_redesign_1.png",
+      galleryImages: [
+        "/brain_rot_designs/sm_redesign_1.png",
+        "/brain_rot_designs/sm_redesign_2.png"
+      ]
+    },
+    {
+      id: "kendrick",
+      title: "Kendrick Lamar Hero",
+      category: "Editorial Design",
+      imageUrl: "/brain_rot_designs/kendrick_lamar_hero_design.png"
+    },
+    {
+      id: "vader",
+      title: "Darth Vader Concept",
+      category: "Editorial Design",
+      imageUrl: "/brain_rot_designs/darth_vader_hero_design.png"
+    },
+    {
+      id: "drake",
+      title: "Drake Hero Design",
+      category: "Editorial Design",
+      imageUrl: "/brain_rot_designs/drake_hero_design.png"
+    },
+    {
+      id: "pacers",
+      title: "Indiana Pacers Hero",
+      category: "Sports Branding",
+      imageUrl: "/brain_rot_designs/indiana_pacers_hero_section_design.png"
+    },
+    {
+      id: "nike",
+      title: "Nike Hero Concept",
+      category: "Product Design",
+      imageUrl: "/brain_rot_designs/nike_hero_section_design.png"
+    },
+    {
+      id: "car-rental",
+      title: "Car Rental UI",
+      category: "App Concept",
+      imageUrl: "/brain_rot_designs/car_rental_concept.png"
+    },
+    {
+      id: "coffee",
+      title: "Coffee Shop App",
+      category: "App Concept",
+      imageUrl: "/brain_rot_designs/coffee_shop_concept_app.png"
+    },
+    {
+      id: "pokemon",
+      title: "Pokemon Landing",
+      category: "Web Design",
+      imageUrl: "/brain_rot_designs/pokemon_landing_page.png"
+    },
+    {
+      id: "spotify",
+      title: "Spotify Dashboard",
+      category: "Interface Design",
+      imageUrl: "/brain_rot_designs/spotify_dashboard_concept.png"
+    }
+  ];
+
+  const personalApps = [
+    {
+      id: "slade",
+      title: "Slade Comics",
+      description: "Inspired by a desire for a free, high-fidelity comic reading experience, Slade was built to modernize the interaction with .cbz and .cbr files. A Flutter project integrated with the Figma API via MCP, it features a gesture-based reader, library management, and persistent progress tracking.",
+      imageUrl: "/personal_apps/slade_comics.png",
+      galleryImages: ["/personal_apps/slade_comics.png"],
+      videoUrl: "/personal_apps/slade_comics_demo.mp4",
+      link: "#",
+      tags: ["Flutter", "Figma API", "MCP", "Vibe-Coding"]
+    },
+    {
+      id: "broke-basket",
+      title: "The Broke Basket",
+      description: "An offline-first Android app created to replace the traditional grocery notebook and manual calculator. Built for seamless budget tracking during shopping trips, it provides a basic yet efficient and reliable experience without the need for an account or connectivity.",
+      imageUrl: "/personal_apps/the_broke_basket_1.png",
+      galleryImages: ["/personal_apps/the_broke_basket_1.png", "/personal_apps/the_broke_basket_2.png"],
+      videoUrl: "/personal_apps/broke_basket_demo.mp4",
+      link: "#",
+      tags: ["React Native", "Expo", "Tailwind", "Antigravity"]
+    }
+  ];
+
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      {/* Hero Header */}
-      <section className="relative w-full h-[50vh] md:h-[65vh] flex items-end overflow-hidden">
-        <Image
-          src="/eod-hero-section.png"
-          alt="End of Day Brand Hero"
-          fill
-          className="object-cover z-0"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-background via-background/60 to-transparent z-10 pointer-events-none" />
-        <FadeIn className="relative z-20 w-full px-6 md:px-12 pb-12 md:pb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
-          <div className="max-w-3xl">
-            <h1 className="font-oswald text-5xl md:text-7xl lg:text-[7rem] leading-none uppercase tracking-tighter text-white mb-6">
-              END OF DAY
-            </h1>
-            <p className="text-lg md:text-xl text-foreground/80 font-sans font-light max-w-xl">
-              In a city lit by dashboards and deadlines, two architectures collide —
-              one powered by effort, the other by scale. When the screen goes white,
-              the question isn’t who wins. It’s who gets their life back.
-            </p>
+    <main className="min-h-screen bg-black text-white selection:bg-white selection:text-black">
+      <PortfolioHero />
+
+      {/* Case Studies Section - Coming Soon */}
+      <section className="w-full py-24 md:py-32 px-6 md:px-16 lg:px-24 border-b border-white/5">
+        <div className="flex flex-col md:flex-row items-baseline justify-between gap-8">
+          <h2 className="font-oswald text-4xl md:text-6xl uppercase tracking-tighter">
+            CASE STUDIES
+          </h2>
+          <div className="flex items-center gap-4">
+            <div className="w-2 h-2 bg-white animate-pulse rounded-full" />
+            <span className="text-xs uppercase tracking-[0.5em] text-muted-foreground">Coming Soon</span>
           </div>
-          <div className="flex gap-6 font-sans text-sm tracking-widest uppercase text-muted-foreground font-semibold">
-            <span className="text-white">Scenarios</span>
-            <Link href="/info" className="hover:text-white transition-colors cursor-pointer">
-              Info
-            </Link>
-          </div>
-        </FadeIn>
+        </div>
+        <p className="mt-8 text-muted-foreground max-w-xl text-sm leading-relaxed font-light uppercase tracking-wide">
+          Deep dives into the strategy, architecture, and engineering behind my major projects. Currently being documented with high-fidelity breakdowns.
+        </p>
       </section>
 
-      {/* Cinematic Grid */}
-      <section className="w-full grid grid-cols-1 md:grid-cols-2">
-        {/* Full Bleed Banner Item (Spans 2 columns on desktop) */}
-        <div className="md:col-span-2 relative group cursor-pointer block w-full h-[50vh] md:h-[70vh] border-b border-border/20 overflow-hidden">
-          <Image
-            src="/scenario2/scenario_2_panel_4.png"
-            alt="The Standoff"
-            fill
-            className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-[1.03]"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700" />
-          <div className="absolute inset-x-0 bottom-0 p-6 md:p-12 bg-gradient-to-t from-black/80 to-transparent">
-            <h2 className="font-oswald text-4xl md:text-6xl text-white uppercase tracking-tight mb-2">
-              The Swarm
-            </h2>
-            <p className="font-sans text-xs tracking-[0.2em] font-medium text-white/70 uppercase">
-              $100,000 Strategy Narrative / Scenario 01
-            </p>
-          </div>
-          <Link href="/scenario-1" className="absolute inset-0 z-10">
-            <span className="sr-only">View The Swarm</span>
-          </Link>
-        </div>
+      <div id="work">
+        <WorkGrid items={workItems} title="BRAIN ROT DESIGNS" />
+      </div>
 
-        {/* Split Grid Item 1 */}
-        <div className="relative group cursor-pointer w-full h-[40vh] md:h-[50vh] border-b md:border-r border-border/20 overflow-hidden">
-          <Image
-            src="/scenario3/scenario_3_panel_4.png"
-            alt="Overtime"
-            fill
-            className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-[1.03]"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-          <div className="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-colors duration-700" />
-          <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/90 to-transparent">
-            <h2 className="font-oswald text-3xl md:text-4xl text-white uppercase tracking-tight mb-1">
-              Overtime
-            </h2>
-            <p className="font-sans text-[10px] tracking-[0.2em] font-medium text-white/70 uppercase">
-              Blue Server Narrative / Scenario 02
-            </p>
-          </div>
-          <Link href="/scenario-2" className="absolute inset-0 z-10">
-            <span className="sr-only">View Overtime</span>
-          </Link>
-        </div>
+      <AppFeatured projects={personalApps} />
 
-        {/* Split Grid Item 2 (Coming Soon) */}
-        <div className="relative group w-full h-[40vh] md:h-[50vh] border-b border-border/20 overflow-hidden">
-          <Image
-            src="/scenario2/scenario_2_panel_13.png"
-            alt="Vector Bloom"
-            fill
-            className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-[1.03] grayscale"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-          <div className="absolute inset-0 bg-black/60" />
-          <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/90 to-transparent">
-            <h2 className="font-oswald text-3xl md:text-4xl text-white uppercase tracking-tight mb-1 opacity-50">
-              Coming Soon
-            </h2>
-            <p className="font-sans text-[10px] tracking-[0.2em] font-medium text-white/40 uppercase">
-              Future Scenario / In Development
-            </p>
+      {/* Footer or final sign-off */}
+      <footer className="w-full py-24 px-6 md:px-16 lg:px-24 flex flex-col items-center justify-center border-t border-border/10">
+        <h3 className="font-oswald text-4xl md:text-6xl uppercase tracking-tighter mb-8">Josef</h3>
+        <p className="text-muted-foreground text-center max-w-sm text-sm uppercase tracking-widest leading-relaxed">
+          UI/UX Engineer
+        </p>
+        <div className="mt-16 flex flex-col md:items-center gap-4 text-[10px] uppercase tracking-widest text-muted-foreground">
+          <div className="flex gap-8 flex-wrap justify-center">
+            <a href="tel:+639777389118" className="hover:text-white transition-colors">+63-977-738-9118</a>
+            <a href="mailto:andreinicolas0816@gmail.com" className="hover:text-white transition-colors">andreinicolas0816@gmail.com</a>
+            <a href="https://linkedin.com/in/andreinclas" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">linkedin.com/in/andreinclas</a>
+            <a href="https://instagram.com/sitcho_pages" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">instagram.com/sitcho_pages</a>
           </div>
+          <span>&copy; {new Date().getFullYear()} Josef's Portfolio</span>
         </div>
-      </section>
-
-      <footer className="w-full px-6 md:px-12 py-12 flex justify-between items-center text-muted-foreground font-sans text-xs uppercase tracking-widest border-t border-border/10">
-        <span>&copy; {new Date().getFullYear()} End of Day</span>
-        <span>Curated Spec Portfolio</span>
       </footer>
     </main>
   );
 }
+

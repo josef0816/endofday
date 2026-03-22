@@ -13,8 +13,8 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "Cinematic Ventures | Narrative Portfolio",
-  description: "A commanding narrative web experience.",
+  title: "Josef's Portfolio",
+  description: "UI/UX Engineer Portfolio",
 };
 
 export default function RootLayout({
